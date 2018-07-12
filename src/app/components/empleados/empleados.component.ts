@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Module = NodeJS.Module;
+
 
 @Component({
   selector: 'app-empleados',
@@ -23,6 +23,16 @@ export class EmpleadosComponent implements OnInit {
   }
 
   ngOnInit() {
+    //Variables y alcance
+      var uno = 1;
+      var dos = 2;
+
+      if (uno == 1) {
+        let uno = 3;
+        console.log('Dentro del IF: '+uno);
+      }
+      
+      console.log ('Fuera del IF: '+uno)
   }
 
 }
