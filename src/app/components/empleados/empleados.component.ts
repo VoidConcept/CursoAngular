@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Empleado} from "./empleado";
 
 @Component({
   selector: 'app-empleados',
@@ -9,30 +9,23 @@ import { Component, OnInit } from '@angular/core';
 
 export class EmpleadosComponent implements OnInit {
 
-  public title:String  = null;
-  public nombre:String = null;
-  public edad:Number = null;
-  public esVaron:Boolean = true;
-  public capacidades:Array<any> = null; //any es un tipo de dato especial que permite cualquier tipo de dato
-  comodin:any = null;
+  public empleado:Empleado;
+  public trabajadores:Array<Empleado>;
 
   constructor() {
-    this.title = 'EmpleadosComponent';
-
-    console.log(this.capacidades);
+      this.empleado = new Empleado('Carlos Otero Seijo',35,'Cherif',true);
   }
 
   ngOnInit() {
-    //Variables y alcance
-      var uno = 1;
-      var dos = 2;
+    this.getTrabajadores();
+  }
 
-      if (uno == 1) {
-        let uno = 3;
-        console.log('Dentro del IF: '+uno);
-      }
-      
-      console.log ('Fuera del IF: '+uno)
+  getTrabajadores() {
+    this.trabajadores = [
+        new Empleado('Carlos Otero Seijo',35,'SuperStar',true),
+        new Empleado('Alex Ponte Ortiz',42,'Cherif',true),
+        new Empleado('Quique Otero Seijo',41,'Cherif *',true)
+    ]
   }
 
 }
