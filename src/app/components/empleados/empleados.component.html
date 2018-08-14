@@ -13,4 +13,13 @@
 
 <p>Accediendo a un elemento del array</p>
 
-<p>{{ trabajadores.[0].nombre }}</p>
+<ul *ngFor="let trabajador of trabajadores">
+  <li>{{ trabajador.nombre }}
+      <ul>
+        <li>{{ trabajador.cargo }}</li>
+        <li>{{ trabajador.edad }}</li>
+        <li *ngIf="trabajador.contratado == true">Contratado</li>
+        <li *ngIf="trabajador.contratado != true">NO Contratado</li>
+    </ul>
+  </li>
+</ul>
