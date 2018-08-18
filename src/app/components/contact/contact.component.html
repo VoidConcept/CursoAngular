@@ -1,3 +1,7 @@
-<p>
-  contact works!
+<p >
+  contact works!. <span *ngIf="parametro">Parámetro: {{ parametro }}</span> 
 </p>
+
+<div *ngIf="!parametro">
+  <button (click)="redirigir()">Redirigir</button>
+</div>

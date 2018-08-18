@@ -11,6 +11,7 @@ import { EmpleadosComponent } from './components/empleados/empleados.component';
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'empleados', component: EmpleadosComponent},
+    {path: 'contact/:page', component: ContactComponent},
     {path: 'contact', component: ContactComponent},
     {path: '**', component: HomeComponent}
 ];
