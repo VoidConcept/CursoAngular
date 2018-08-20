@@ -1,3 +1,4 @@
-<p>
-  home works!
-</p>
+<input type="text" [(ngModel)]="empleadoNombre"/><button (click)="addEmpleado()">Añadir prenda</button>
+<ul *ngFor="let empleado of listadoEmpleados;let i = index">
+  <li>{{ empleado }} <a (click)="delEmpleado(i)">[Eliminar]</a></li>
+</ul>
