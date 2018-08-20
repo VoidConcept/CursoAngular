@@ -7,6 +7,7 @@ import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
+import { CommonPipesPipe } from './pipes/common-pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ErrorComponent } from './components/error/error.component';
     EmpleadosComponent,
     HomeComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    CommonPipesPipe
   ],
   imports: [
     BrowserModule,

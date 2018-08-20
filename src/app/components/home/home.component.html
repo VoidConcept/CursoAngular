@@ -2,3 +2,25 @@
 <ul *ngFor="let empleado of listadoEmpleados;let i = index">
   <li>{{ empleado }} <a (click)="delEmpleado(i)">[Eliminar]</a></li>
 </ul>
+
+<h3>Pipes</h3>
+<h5>Pipes de Fecha</h5>
+<ul>
+  <li>date:  {{ fecha | date: 'fullDate' }}</li>
+  <li>date:  {{ fecha | date: 'dd/MM/yy' }}</li> ngpipe
+</ul>
+
+<h5>Pipes de Strings</h5>
+<ul>
+  <li>uppercase:  {{ fecha | date: 'fullDate' | uppercase}}</li>
+  <li>lowecase:  {{ fecha | date: 'fullDate' | lowercase  }}</li>
+</ul>
+
+<h5>Creación de un pipe personalizado</h5>
+
+<p>ng generate pipe path/nombre</p>
+<p>Estructura: import {{ '{ Pipe, PipeTransform }' }} from '@angular/core'</p>
+<p>Decorador @Pipe: name: nombrePipe </p>
+<p>export class nombrePipe implements PipeTransform</p>
+<p>Se define un método transform que será el que contenga la lógica.
+<p>Se importa la clase en app.modules.ts y se declara en declarations.</p>
