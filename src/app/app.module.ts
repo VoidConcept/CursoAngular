@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { CommonPipesPipe } from './pipes/common-pipes.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommonPipesPipe } from './pipes/common-pipes.pipe';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+      HttpClientModule
   ],
   providers: [
     appRoutingProviders

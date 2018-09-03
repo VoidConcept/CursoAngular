@@ -5,3 +5,11 @@
 <div *ngIf="!parametro">
   <button (click)="redirigir()">Redirigir</button>
 </div>
+
+<h3>Listado de artículos</h3>
+<ul *ngIf="posts">
+  <li *ngFor="let articulo of posts">
+    {{ articulo.id }} - {{ articulo.title }}
+  </li>
+  <span *ngIf="!posts">Cargando listado ...</span>
+</ul>
